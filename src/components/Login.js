@@ -37,6 +37,9 @@ const styles = () => ({
     color: "#f50057",
     marginBottom: 5,
     textAlign: "center"
+  },
+  login__registerButton:{
+    margin:10,
   }
 });
 
@@ -57,7 +60,7 @@ class Login extends Component {
 
     dispatch(loginUser(email, password));
   };
-
+  
   handleSignUp=event=>{
     event.preventDefault();  //for avoid loss of data after refreshing 
     console.log("this is registration page")
@@ -66,10 +69,7 @@ class Login extends Component {
         // Signed in 
         console.log(userCredential.email);
         // ...
-        // history.push({
-        //     pathname:'/register',
-        //     state:{detail:email}
-        // })
+        // history.push()
     })
     .catch((error) => {
         alert(error.message)
@@ -123,7 +123,8 @@ class Login extends Component {
             >
               Sign In
             </Button>
-            <button onClick={(event) => this.handleSignUp(event)} className="login__registerButton">Create your Account</button>
+
+            
           </Paper>
         </Container>
       );

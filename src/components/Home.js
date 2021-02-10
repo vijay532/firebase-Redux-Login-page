@@ -12,7 +12,7 @@ class Home extends Component {
 
     return (
       <div>
-        <h1>This is your app's protected area.</h1>
+        
         <h1>hello home page 🚀</h1>
         <button onClick={this.handleLogout}>Logout</button>
         {isLoggingOut && <p>Logging Out....</p>}
